@@ -1,0 +1,307 @@
+/* ==========================================================================
+   responsive.css — all breakpoints in one place (desktop-first)
+   Standard widths: 1000 (tablet/nav collapse) · 760 (mobile) · 520 (small mobile)
+   Loaded last so it can override base rules.
+   ========================================================================== */
+
+@media (max-width: 1000px) {
+  .nav__toggle {
+    display: flex;
+  }
+
+  .nav__menu {
+    position: absolute;
+    top: calc(var(--nav-height) + env(safe-area-inset-top, 0px));
+    left: 1.25rem;
+    right: 1.25rem;
+    padding: 0.6rem;
+    border-radius: var(--radius-lg);
+    background: var(--glass-strong);
+    border: 1px solid var(--border);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease), visibility var(--dur-fast);
+  }
+
+  .nav__menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+
+  .nav__list {
+    flex-direction: column;
+  }
+
+  .nav__link {
+    padding: 0.8rem 1rem;
+    border-radius: var(--radius-md);
+  }
+
+  .info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project--featured {
+    flex-direction: column;
+  }
+
+  .project--featured .project__media {
+    flex: none;
+    aspect-ratio: 16 / 8;
+    min-height: 0;
+  }
+
+  .cat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .learning__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .stat--main {
+    grid-column: 1 / -1;
+  }
+
+  .repos__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dash-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ach-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .certs__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .site-footer__top {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .site-footer__brand {
+    grid-column: 1 / -1;
+  }
+
+}
+
+@media (max-width: 760px) {
+  .about__layout {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about__intro {
+    margin-inline: auto;
+  }
+
+  .about__actions {
+    justify-content: center;
+  }
+
+  .avatar {
+    width: min(70%, 260px);
+  }
+
+  .projects__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search {
+    width: 100%;
+  }
+
+  .project--featured .project__media {
+    aspect-ratio: 16 / 10;
+  }
+
+  .projects__more .btn {
+    width: 100%;
+  }
+
+  .cat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat {
+    padding: 0.9rem 1rem;
+  }
+
+  .stat dd {
+    font-size: 1.6rem;
+  }
+
+  .stat--main dd {
+    font-size: 2.2rem;
+  }
+
+  .feature {
+    grid-template-columns: 1fr;
+  }
+
+  .feature__art {
+    min-height: 150px;
+  }
+
+  .feature__art::after {
+    background: linear-gradient(to top, rgba(5,7,13,0.45), transparent 60%);
+  }
+
+  .cert-dialog__panel {
+    grid-template-columns: 1fr;
+  }
+
+  .cert-dialog__media {
+    min-height: 200px;
+  }
+
+  .resume {
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+  }
+
+  .resume__meta, .resume__actions {
+    justify-content: center;
+  }
+
+  .resume__sheet {
+    width: 150px;
+  }
+
+  .socials {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .socials__list {
+    justify-content: center;
+  }
+
+}
+
+@media (max-width: 520px) {
+  .hero__actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about__actions {
+    flex-direction: column;
+  }
+
+  .about__actions .btn {
+    width: 100%;
+  }
+
+  .repos__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tile__value {
+    font-size: 1.4rem;
+  }
+
+  .analytics .card > .btn {
+    align-self: stretch;
+  }
+
+  .calendar {
+    --cell: 11px;
+    --gap: 2px;
+  }
+
+  .ach-grid, .certs__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .certs__more .btn {
+    width: 100%;
+  }
+
+  .contact__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resume__actions, .cta-panel__actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .resume__actions .btn, .cta-panel__actions .btn {
+    width: 100%;
+  }
+
+  .site-footer__top {
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer__bottom {
+    flex-direction: column;
+  }
+
+}
+
+/* Small phones: the skills counter strip becomes a tidy list (three columns cannot fit "Intermediate") */
+@media (max-width: 520px) {
+  .stats { grid-template-columns: 1fr; gap: 0.5rem; }
+  .stat:not(.stat--main) { display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1rem; }
+  .stat:not(.stat--main) dd { margin: 0; font-size: 1.4rem; }
+}
+
+/* Mobile menu: never taller than the viewport (landscape phones) */
+@media (max-width: 1000px) {
+  .nav__menu { max-height: calc(100vh - var(--nav-height) - 2rem); max-height: calc(100dvh - var(--nav-height) - 2rem); overflow-y: auto; }
+}
+
+/* Cheaper blur on small screens (GPU / battery) */
+@media (max-width: 760px) {
+  .bg__blob { filter: blur(56px); }
+}
+
+/* Touch: comfortable hit areas without changing the look */
+@media (pointer: coarse) {
+  .chip, .btn--sm, .c-card__copy { min-height: 44px; }
+  .to-top { right: calc(1rem + env(safe-area-inset-right, 0px)); }
+}
+
+/* Print: clean, ink-friendly output */
+@media print {
+  .bg, .nav, .to-top, .scroll-cue, .skip-link { display: none !important; }
+  body { background: #fff; color: #000; }
+  .section { padding-block: 1.5rem; break-inside: avoid; }
+  [data-reveal] { opacity: 1 !important; transform: none !important; }
+}

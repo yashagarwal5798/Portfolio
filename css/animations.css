@@ -1,0 +1,52 @@
+/* ==========================================================================
+   animations.css — every keyframe, reveal rule and motion preference
+   One entrance, one glow, one pulse, one shimmer, one spin for the whole site.
+   Only transform and opacity are animated.
+   ========================================================================== */
+
+/* Keyframes ----------------------------------------------------------------- */
+@keyframes drift-a { to { transform: translate3d(12vmax, 8vmax, 0) scale(1.1); } }
+@keyframes drift-b { to { transform: translate3d(-10vmax, 10vmax, 0) scale(0.9); } }
+@keyframes drift-c { to { transform: translate3d(-8vmax, -6vmax, 0) scale(1.15); } }
+@keyframes blink { 50% { opacity: 0; } }
+@keyframes wheel { 0% { opacity: 0; transform: translateY(0); } 30% { opacity: 1; } 100% { opacity: 0; transform: translateY(14px); } }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes glow-pulse { 50% { opacity: 0.85; transform: var(--glow-pos, none) scale(1.06); } }
+@keyframes ring-pulse { 70% { box-shadow: 0 0 0 9px transparent; } 100% { box-shadow: 0 0 0 0 transparent; } }
+@keyframes shimmer { 50% { opacity: 0.45; } }
+@keyframes enter { from { opacity: 0; transform: translateY(14px) scale(0.98); } to { opacity: 1; transform: none; } }
+@keyframes pop { from { opacity: 0; transform: translateY(12px) scale(0.97); } to { opacity: 1; transform: none; } }
+
+/* Scroll reveal: hidden only after animations.js sets .reveal-ready.
+   Once revealed, JS removes [data-reveal] so the element's own hover transitions apply. */
+.reveal-ready [data-reveal] {
+  opacity: 0; transform: translateY(26px);
+  transition: opacity var(--dur-slow) var(--ease), transform var(--dur-slow) var(--ease);
+  transition-delay: calc(var(--i, 0) * 90ms);
+}
+.reveal-ready [data-reveal].is-visible { opacity: 1; transform: none; }
+
+/* Items that appear after filtering or expanding */
+.is-entering { animation: enter var(--dur-base) var(--ease) both; animation-delay: calc(var(--n, 0) * 70ms); }
+
+/* Progress bars fill when their card is revealed */
+.reveal-ready .progress__bar {
+  transform: scaleX(0);
+  transition: transform var(--dur-data) var(--ease) var(--dur-fast);
+}
+
+.reveal-ready .is-visible .progress__bar {
+  transform: scaleX(1);
+}
+
+/* Ambient animation is paused when off-screen or when the tab is hidden */
+[data-ambient].is-paused, [data-ambient].is-paused *, [data-ambient].is-paused *::before, [data-ambient].is-paused *::after,
+html.is-tab-hidden *, html.is-tab-hidden *::before, html.is-tab-hidden *::after { animation-play-state: paused !important; }
+
+/* Reduced motion: no reveals, loops, lifts or zooms; hover colour changes remain */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition-duration: 0.001ms !important; transition-delay: 0ms !important; }
+  .reveal-ready [data-reveal] { opacity: 1; transform: none; }
+  :root { --lift-sm: 0px; --lift-md: 0px; --zoom-img: 1; }
+}
