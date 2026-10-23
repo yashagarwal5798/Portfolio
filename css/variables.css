@@ -1,10 +1,11 @@
 /* ==========================================================================
-   variables.css — design tokens (single source of truth)
-   Theme: Earthy & organic — forest green, warm beige, terracotta, slate grey
+   variables.css — Earthy & organic theme
+   forest green · warm beige · terracotta · slate grey
+   Force redeploy: 2026-10-23
    ========================================================================== */
 
 :root {
-  /* ---- Colour: surfaces & text (dark is the reference theme) ---- */
+  /* ---- Surfaces & text (dark) ---- */
   --bg: #121816;
   --bg-elevated: #1a221e;
   --text: #f0ebe3;
@@ -18,17 +19,17 @@
   --surface-dialog: rgba(18, 24, 22, 0.94);
   --border: rgba(240, 235, 227, 0.1);
 
-  /* ---- Colour: earthy ramp (replaces blue) ---- */
-  --blue-300: #a8c4b0;   /* soft sage */
-  --blue-400: #6b9b7a;   /* accent text, icons, focus ring — forest mid */
-  --blue-500: #4a7c59;   /* borders, data fills, glow source */
-  --blue-600: #3d6b4a;   /* filled controls */
+  /* ---- Earthy ramp (used as --blue-* for compatibility) ---- */
+  --blue-300: #a8c4b0;
+  --blue-400: #6b9b7a;
+  --blue-500: #4a7c59;
+  --blue-600: #3d6b4a;
   --blue-700: #2d5a3a;
   --blue-900: #1a3c2a;
-  --cyan-400: #c4785a;   /* terracotta accent */
+  --cyan-400: #c4785a;
   --glow: rgba(74, 124, 89, 0.4);
 
-  /* ---- Colour: semantic ---- */
+  /* ---- Semantic ---- */
   --success: #5a9a6e;
   --warning: #d4a054;
   --danger: #c4785a;
@@ -40,7 +41,7 @@
   --lvl-intermediate: #6b9b7a;
   --lvl-advanced: #c4785a;
 
-  /* ---- Colour: gradients & decorative ---- */
+  /* ---- Gradients & decorative ---- */
   --gradient-primary: linear-gradient(180deg, var(--blue-600), var(--blue-700));
   --gradient-accent: linear-gradient(110deg, #6b9b7a, #4a7c59 45%, #c4785a);
   --blob-a: #2d5a3a;
@@ -58,7 +59,7 @@
   --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
-  /* ---- Spacing (4 px base) ---- */
+  /* ---- Spacing ---- */
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
@@ -70,7 +71,7 @@
   --space-12: 3rem;
   --space-16: 4rem;
 
-  /* ---- Radius scale ---- */
+  /* ---- Radius ---- */
   --radius-xs: 4px;
   --radius-sm: 8px;
   --radius-md: 12px;
@@ -112,7 +113,7 @@
   :root { --lift-sm: 0px; --lift-md: 0px; --zoom-img: 1; }
 }
 
-/* ---- Light theme: warm beige base + forest green accents ---- */
+/* ---- Light: warm beige + forest green ---- */
 :root[data-theme="light"] {
   --bg: #f5f0e8;
   --bg-elevated: #ebe4d8;
