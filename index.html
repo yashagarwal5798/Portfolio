@@ -8,10 +8,10 @@
   <script>try{var t=localStorage.getItem("pf-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
 
   <title>Yash Agarwal — Java Developer &amp; CSE Student | Portfolio</title>
-  <meta name="description" content="Portfolio of Yash Agarwal, a Java Developer and B.Tech Computer Science student at GLA University. Explore projects, skills, live GitHub and LeetCode stats, and resume.">
+  <meta name="description" content="Portfolio of Yash Agarwal, a Java Developer and B.Tech CSE (AI & Data Science) student at GLA University. Explore projects, skills, live GitHub and LeetCode stats, and resume.">
   <meta name="author" content="Yash Agarwal">
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#05070d">
+  <meta name="theme-color" content="#121816">
   <link rel="canonical" href="https://yashagarwal5798.github.io/">
 
   <!-- Open Graph / social previews -->
@@ -77,6 +77,31 @@
   <script src="js/github.js" defer></script>
   <script src="js/leetcode.js" defer></script>
   <script src="js/main.js" defer></script>
+
+  <style>
+    .hero__name {
+      display: block;
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--blue-400);
+      margin-bottom: 0.6rem;
+    }
+    .avatar__inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+    }
+    .cert__media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: inherit;
+    }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -135,7 +160,7 @@
         </p>
 
         <h1 class="hero__title" id="hero-title">
-          <span class="sr-only">Yash Agarwal — </span>
+          <span class="hero__name">Yash Agarwal</span><br>
           Building Software.<br>
           <span class="gradient-text">Solving Problems.</span>
         </h1>
@@ -180,11 +205,7 @@
         <div class="avatar__glow" aria-hidden="true"></div>
         <div class="avatar__ring">
           <div class="avatar__inner">
-            <!-- Replace the SVG with: <img src="assets/images/YOUR_AVATAR.jpg" alt="Portrait of Yash Agarwal" width="320" height="320"> -->
-            <svg class="avatar__placeholder" viewBox="0 0 24 24" role="img" aria-label="Avatar placeholder">
-              <circle cx="12" cy="8.5" r="4"/>
-              <path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/>
-            </svg>
+            <img src="assets/images/yash-profile.jpg" alt="Portrait of Yash Agarwal" width="320" height="320" loading="lazy">
           </div>
         </div>
       </figure>
@@ -192,11 +213,11 @@
       <!-- Introduction -->
       <div class="about__body">
         <h3 class="about__name" id="about-name" data-reveal style="--i:2">Yash Agarwal</h3>
-        <p class="about__role gradient-text" data-reveal style="--i:3">Java Developer · B.Tech CSE Student</p>
+        <p class="about__role gradient-text" data-reveal style="--i:3">Java Developer · AI &amp; Data Science</p>
 
         <div class="about__intro" data-reveal style="--i:4">
-          <p>I’m a B.Tech Computer Science student at GLA University (2025–2029) and a passionate Java Developer. I focus on strengthening my Data Structures &amp; Algorithms skills and writing clean, efficient code.</p>
-          <p>Currently building a strong foundation in Java and Python while solving problems on LeetCode and preparing for software engineering opportunities.</p>
+          <p>I am Yash Agarwal, a B.Tech student specializing in Artificial Intelligence and Data Science, with a strong interest in software development and problem-solving. I enjoy building clean, user-friendly web applications and continuously improving my programming skills through hands-on projects and data structures &amp; algorithms. My primary programming language is Java, and I regularly practice coding challenges on LeetCode to strengthen my analytical thinking.</p>
+          <p>I am currently expanding my knowledge in full-stack web development, Git, GitHub, and modern development tools, while building projects that demonstrate practical skills and real-world problem-solving. I am actively seeking opportunities to learn, collaborate, and contribute through internships where I can grow as a software engineer and create meaningful solutions.</p>
         </div>
 
         <div class="about__actions" data-reveal style="--i:5">
@@ -216,8 +237,8 @@
           <svg viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5L2 9z"/><path d="M6 11.5V16c0 1.2 2.7 3 6 3s6-1.8 6-3v-4.5"/></svg>
         </span>
         <h3 class="info-card__label">Education</h3>
-        <p class="info-card__value">B.Tech in Computer Science</p>
-        <p class="info-card__meta">GLA University · 2025 – 2029</p>
+        <p class="info-card__value">B.Tech CSE (AI &amp; Data Science)</p>
+        <p class="info-card__meta">GLA University · 2025 – 2029 · CPI 7.93</p>
       </li>
 
       <li class="info-card" data-glow data-reveal style="--i:2">
@@ -820,24 +841,23 @@
     <div class="certs" aria-labelledby="certs-title">
       <div class="certs__head" data-reveal>
         <h3 class="certs__title" id="certs-title">Certificates</h3>
-        <p class="certs__count" data-cert-count>9 certificates</p>
+        <p class="certs__count" data-cert-count>3 certificates</p>
       </div>
       <ul class="certs__grid" role="list" id="cert-grid" data-cert-grid>
         <li class="cert-item" data-reveal style="--i:0">
           <article class="cert" aria-labelledby="cert-1" data-cert>
-            <div class="cert__media" style="--g1:#1d4ed8;--g2:#38bdf8">
-              <!-- Replace with: <img src="assets/images/YOUR_CERTIFICATE_IMAGE_1.jpg" alt="Certificate preview: YOUR_CERTIFICATE_TITLE_1" loading="lazy" width="640" height="400"> -->
-              <svg class="cert__art" viewBox="0 0 120 80" aria-hidden="true"><rect x="6" y="6" width="108" height="68" rx="5"/><path d="M22 24h50M22 34h36M22 44h28"/><circle cx="92" cy="50" r="9"/><path d="M87 58l-3 12 8-4 8 4-3-12"/></svg>
+            <div class="cert__media" style="--g1:#2d5a3a;--g2:#c4785a">
+              <img src="assets/certificates/pinnacle-preview.jpg" alt="Certificate: Pinnacle Labs Java Internship" loading="lazy" width="640" height="400" onerror="this.style.display='none'">
             </div>
             <div class="cert__body">
-              <h4 class="cert__title" id="cert-1">YOUR_CERTIFICATE_TITLE_1</h4>
-              <p class="cert__org">YOUR_ORGANIZATION</p>
-              <p class="cert__date">YOUR_DATE</p>
-              <ul class="cert__skills" role="list" aria-label="Skills covered"><li>YOUR_SKILL_1</li><li>YOUR_SKILL_2</li><li>YOUR_SKILL_3</li></ul>
+              <h4 class="cert__title" id="cert-1">Java Development Internship</h4>
+              <p class="cert__org">Pinnacle Labs</p>
+              <p class="cert__date">15 Jun – 15 Jul 2026</p>
+              <ul class="cert__skills" role="list" aria-label="Skills covered"><li>Java</li><li>Software Development</li><li>Problem Solving</li></ul>
               <div class="cert__actions">
-                <a class="btn btn--primary btn--sm" href="assets/certificates/YOUR_CERTIFICATE_1.pdf" target="_blank" rel="noopener noreferrer" data-cert-view>View<span class="sr-only"> certificate: YOUR_CERTIFICATE_TITLE_1</span></a>
-                <a class="btn btn--ghost btn--sm" href="assets/certificates/YOUR_CERTIFICATE_1.pdf" download>
-                  <svg class="btn__icon btn__icon--dl" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg>Download<span class="sr-only"> certificate: YOUR_CERTIFICATE_TITLE_1 (PDF)</span>
+                <a class="btn btn--primary btn--sm" href="assets/certificates/pinnacle-java-internship.pdf" target="_blank" rel="noopener noreferrer" data-cert-view>View<span class="sr-only"> certificate: Pinnacle Labs</span></a>
+                <a class="btn btn--ghost btn--sm" href="assets/certificates/pinnacle-java-internship.pdf" download>
+                  <svg class="btn__icon btn__icon--dl" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg>Download<span class="sr-only"> certificate PDF</span>
                 </a>
               </div>
             </div>
@@ -845,19 +865,18 @@
         </li>
         <li class="cert-item" data-reveal style="--i:1">
           <article class="cert" aria-labelledby="cert-2" data-cert>
-            <div class="cert__media" style="--g1:#1e3a8a;--g2:#3b82f6">
-              <!-- Replace with: <img src="assets/images/YOUR_CERTIFICATE_IMAGE_2.jpg" alt="Certificate preview: YOUR_CERTIFICATE_TITLE_2" loading="lazy" width="640" height="400"> -->
-              <svg class="cert__art" viewBox="0 0 120 80" aria-hidden="true"><rect x="6" y="6" width="108" height="68" rx="5"/><path d="M22 24h50M22 34h36M22 44h28"/><circle cx="92" cy="50" r="9"/><path d="M87 58l-3 12 8-4 8 4-3-12"/></svg>
+            <div class="cert__media" style="--g1:#4a7c59;--g2:#6b9b7a">
+              <img src="assets/certificates/unoq-build-lab.jpg" alt="Certificate: UnoQ Build Lab" loading="lazy" width="640" height="400">
             </div>
             <div class="cert__body">
-              <h4 class="cert__title" id="cert-2">YOUR_CERTIFICATE_TITLE_2</h4>
-              <p class="cert__org">YOUR_ORGANIZATION</p>
-              <p class="cert__date">YOUR_DATE</p>
-              <ul class="cert__skills" role="list" aria-label="Skills covered"><li>YOUR_SKILL_1</li><li>YOUR_SKILL_2</li><li>YOUR_SKILL_3</li></ul>
+              <h4 class="cert__title" id="cert-2">UnoQ Build Lab</h4>
+              <p class="cert__org">hackFront India × Arduino</p>
+              <p class="cert__date">08 Oct 2026 · GLA University</p>
+              <ul class="cert__skills" role="list" aria-label="Skills covered"><li>Hardware</li><li>Hands-on Building</li><li>Problem Solving</li></ul>
               <div class="cert__actions">
-                <a class="btn btn--primary btn--sm" href="assets/certificates/YOUR_CERTIFICATE_2.pdf" target="_blank" rel="noopener noreferrer" data-cert-view>View<span class="sr-only"> certificate: YOUR_CERTIFICATE_TITLE_2</span></a>
-                <a class="btn btn--ghost btn--sm" href="assets/certificates/YOUR_CERTIFICATE_2.pdf" download>
-                  <svg class="btn__icon btn__icon--dl" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg>Download<span class="sr-only"> certificate: YOUR_CERTIFICATE_TITLE_2 (PDF)</span>
+                <a class="btn btn--primary btn--sm" href="assets/certificates/unoq-build-lab.jpg" target="_blank" rel="noopener noreferrer" data-cert-view>View<span class="sr-only"> certificate: UnoQ Build Lab</span></a>
+                <a class="btn btn--ghost btn--sm" href="assets/certificates/unoq-build-lab.jpg" download>
+                  <svg class="btn__icon btn__icon--dl" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg>Download<span class="sr-only"> certificate</span>
                 </a>
               </div>
             </div>
@@ -865,139 +884,18 @@
         </li>
         <li class="cert-item" data-reveal style="--i:2">
           <article class="cert" aria-labelledby="cert-3" data-cert>
-            <div class="cert__media" style="--g1:#312e81;--g2:#60a5fa">
-              <!-- Replace with: <img src="assets/images/YOUR_CERTIFICATE_IMAGE_3.jpg" alt="Certificate preview: YOUR_CERTIFICATE_TITLE_3" loading="lazy" width="640" height="400"> -->
-              <svg class="cert__art" viewBox="0 0 120 80" aria-hidden="true"><rect x="6" y="6" width="108" height="68" rx="5"/><path d="M22 24h50M22 34h36M22 44h28"/><circle cx="92" cy="50" r="9"/><path d="M87 58l-3 12 8-4 8 4-3-12"/></svg>
+            <div class="cert__media" style="--g1:#3d6b4a;--g2:#a8c4b0">
+              <img src="assets/certificates/quizoff-2026.jpg" alt="Certificate: QuizOff 2026 AI Quiz" loading="lazy" width="640" height="400">
             </div>
             <div class="cert__body">
-              <h4 class="cert__title" id="cert-3">YOUR_CERTIFICATE_TITLE_3</h4>
-              <p class="cert__org">YOUR_ORGANIZATION</p>
-              <p class="cert__date">YOUR_DATE</p>
-              <ul class="cert__skills" role="list" aria-label="Skills covered"><li>YOUR_SKILL_1</li><li>YOUR_SKILL_2</li><li>YOUR_SKILL_3</li></ul>
+              <h4 class="cert__title" id="cert-3">QuizOff 2026 — India's Biggest AI Quiz</h4>
+              <p class="cert__org">CampusCrew × Unstop</p>
+              <p class="cert__date">19 Jul 2026</p>
+              <ul class="cert__skills" role="list" aria-label="Skills covered"><li>AI</li><li>Quiz</li><li>Analytical Thinking</li></ul>
               <div class="cert__actions">
-                <a class="btn btn--primary btn--sm" href="assets/certificates/YOUR_CERTIFICATE_3.pdf" target="_blank" rel="noopener noreferrer" data-cert-view>View<span class="sr-only"> certificate: YOUR_CERTIFICATE_TITLE_3</span></a>
-                <a class="btn btn--ghost btn--sm" href="assets/certificates/YOUR_CERTIFICATE_3.pdf" download>
-                  <svg class="btn__icon btn__icon--dl" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg>Download<span class="sr-only"> certificate: YOUR_CERTIFICATE_TITLE_3 (PDF)</span>
-                </a>
-              </div>
-            </div>
-          </article>
-        </li>
-        <li class="cert-item" data-reveal style="--i:0">
-          <article class="cert" aria-labelledby="cert-4" data-cert>
-            <div class="cert__media" style="--g1:#0369a1;--g2:#38bdf8">
-              <!-- Replace with: <img src="assets/images/YOUR_CERTIFICATE_IMAGE_4.jpg" alt="Certificate preview: YOUR_CERTIFICATE_TITLE_4" loading="lazy" width="640" height="400"> -->
-              <svg class="cert__art" viewBox="0 0 120 80" aria-hidden="true"><rect x="6" y="6" width="108" height="68" rx="5"/><path d="M22 24h50M22 34h36M22 44h28"/><circle cx="92" cy="50" r="9"/><path d="M87 58l-3 12 8-4 8 4-3-12"/></svg>
-            </div>
-            <div class="cert__body">
-              <h4 class="cert__title" id="cert-4">YOUR_CERTIFICATE_TITLE_4</h4>
-              <p class="cert__org">YOUR_ORGANIZATION</p>
-              <p class="cert__date">YOUR_DATE</p>
-              <ul class="cert__skills" role="list" aria-label="Skills covered"><li>YOUR_SKILL_1</li><li>YOUR_SKILL_2</li><li>YOUR_SKILL_3</li></ul>
-              <div class="cert__actions">
-                <a class="btn btn--primary btn--sm" href="assets/certificates/YOUR_CERTIFICATE_4.pdf" target="_blank" rel="noopener noreferrer" data-cert-view>View<span class="sr-only"> certificate: YOUR_CERTIFICATE_TITLE_4</span></a>
-                <a class="btn btn--ghost btn--sm" href="assets/certificates/YOUR_CERTIFICATE_4.pdf" download>
-                  <svg class="btn__icon btn__icon--dl" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg>Download<span class="sr-only"> certificate: YOUR_CERTIFICATE_TITLE_4 (PDF)</span>
-                </a>
-              </div>
-            </div>
-          </article>
-        </li>
-        <li class="cert-item" data-reveal style="--i:1">
-          <article class="cert" aria-labelledby="cert-5" data-cert>
-            <div class="cert__media" style="--g1:#1d4ed8;--g2:#818cf8">
-              <!-- Replace with: <img src="assets/images/YOUR_CERTIFICATE_IMAGE_5.jpg" alt="Certificate preview: YOUR_CERTIFICATE_TITLE_5" loading="lazy" width="640" height="400"> -->
-              <svg class="cert__art" viewBox="0 0 120 80" aria-hidden="true"><rect x="6" y="6" width="108" height="68" rx="5"/><path d="M22 24h50M22 34h36M22 44h28"/><circle cx="92" cy="50" r="9"/><path d="M87 58l-3 12 8-4 8 4-3-12"/></svg>
-            </div>
-            <div class="cert__body">
-              <h4 class="cert__title" id="cert-5">YOUR_CERTIFICATE_TITLE_5</h4>
-              <p class="cert__org">YOUR_ORGANIZATION</p>
-              <p class="cert__date">YOUR_DATE</p>
-              <ul class="cert__skills" role="list" aria-label="Skills covered"><li>YOUR_SKILL_1</li><li>YOUR_SKILL_2</li><li>YOUR_SKILL_3</li></ul>
-              <div class="cert__actions">
-                <a class="btn btn--primary btn--sm" href="assets/certificates/YOUR_CERTIFICATE_5.pdf" target="_blank" rel="noopener noreferrer" data-cert-view>View<span class="sr-only"> certificate: YOUR_CERTIFICATE_TITLE_5</span></a>
-                <a class="btn btn--ghost btn--sm" href="assets/certificates/YOUR_CERTIFICATE_5.pdf" download>
-                  <svg class="btn__icon btn__icon--dl" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg>Download<span class="sr-only"> certificate: YOUR_CERTIFICATE_TITLE_5 (PDF)</span>
-                </a>
-              </div>
-            </div>
-          </article>
-        </li>
-        <li class="cert-item" data-reveal style="--i:2">
-          <article class="cert" aria-labelledby="cert-6" data-cert>
-            <div class="cert__media" style="--g1:#0c4a6e;--g2:#60a5fa">
-              <!-- Replace with: <img src="assets/images/YOUR_CERTIFICATE_IMAGE_6.jpg" alt="Certificate preview: YOUR_CERTIFICATE_TITLE_6" loading="lazy" width="640" height="400"> -->
-              <svg class="cert__art" viewBox="0 0 120 80" aria-hidden="true"><rect x="6" y="6" width="108" height="68" rx="5"/><path d="M22 24h50M22 34h36M22 44h28"/><circle cx="92" cy="50" r="9"/><path d="M87 58l-3 12 8-4 8 4-3-12"/></svg>
-            </div>
-            <div class="cert__body">
-              <h4 class="cert__title" id="cert-6">YOUR_CERTIFICATE_TITLE_6</h4>
-              <p class="cert__org">YOUR_ORGANIZATION</p>
-              <p class="cert__date">YOUR_DATE</p>
-              <ul class="cert__skills" role="list" aria-label="Skills covered"><li>YOUR_SKILL_1</li><li>YOUR_SKILL_2</li><li>YOUR_SKILL_3</li></ul>
-              <div class="cert__actions">
-                <a class="btn btn--primary btn--sm" href="assets/certificates/YOUR_CERTIFICATE_6.pdf" target="_blank" rel="noopener noreferrer" data-cert-view>View<span class="sr-only"> certificate: YOUR_CERTIFICATE_TITLE_6</span></a>
-                <a class="btn btn--ghost btn--sm" href="assets/certificates/YOUR_CERTIFICATE_6.pdf" download>
-                  <svg class="btn__icon btn__icon--dl" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg>Download<span class="sr-only"> certificate: YOUR_CERTIFICATE_TITLE_6 (PDF)</span>
-                </a>
-              </div>
-            </div>
-          </article>
-        </li>
-        <li class="cert-item" data-extra hidden data-reveal style="--i:0">
-          <article class="cert" aria-labelledby="cert-7" data-cert>
-            <div class="cert__media" style="--g1:#1e40af;--g2:#22d3ee">
-              <!-- Replace with: <img src="assets/images/YOUR_CERTIFICATE_IMAGE_7.jpg" alt="Certificate preview: YOUR_CERTIFICATE_TITLE_7" loading="lazy" width="640" height="400"> -->
-              <svg class="cert__art" viewBox="0 0 120 80" aria-hidden="true"><rect x="6" y="6" width="108" height="68" rx="5"/><path d="M22 24h50M22 34h36M22 44h28"/><circle cx="92" cy="50" r="9"/><path d="M87 58l-3 12 8-4 8 4-3-12"/></svg>
-            </div>
-            <div class="cert__body">
-              <h4 class="cert__title" id="cert-7">YOUR_CERTIFICATE_TITLE_7</h4>
-              <p class="cert__org">YOUR_ORGANIZATION</p>
-              <p class="cert__date">YOUR_DATE</p>
-              <ul class="cert__skills" role="list" aria-label="Skills covered"><li>YOUR_SKILL_1</li><li>YOUR_SKILL_2</li><li>YOUR_SKILL_3</li></ul>
-              <div class="cert__actions">
-                <a class="btn btn--primary btn--sm" href="assets/certificates/YOUR_CERTIFICATE_7.pdf" target="_blank" rel="noopener noreferrer" data-cert-view>View<span class="sr-only"> certificate: YOUR_CERTIFICATE_TITLE_7</span></a>
-                <a class="btn btn--ghost btn--sm" href="assets/certificates/YOUR_CERTIFICATE_7.pdf" download>
-                  <svg class="btn__icon btn__icon--dl" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg>Download<span class="sr-only"> certificate: YOUR_CERTIFICATE_TITLE_7 (PDF)</span>
-                </a>
-              </div>
-            </div>
-          </article>
-        </li>
-        <li class="cert-item" data-extra hidden data-reveal style="--i:1">
-          <article class="cert" aria-labelledby="cert-8" data-cert>
-            <div class="cert__media" style="--g1:#172554;--g2:#3b82f6">
-              <!-- Replace with: <img src="assets/images/YOUR_CERTIFICATE_IMAGE_8.jpg" alt="Certificate preview: YOUR_CERTIFICATE_TITLE_8" loading="lazy" width="640" height="400"> -->
-              <svg class="cert__art" viewBox="0 0 120 80" aria-hidden="true"><rect x="6" y="6" width="108" height="68" rx="5"/><path d="M22 24h50M22 34h36M22 44h28"/><circle cx="92" cy="50" r="9"/><path d="M87 58l-3 12 8-4 8 4-3-12"/></svg>
-            </div>
-            <div class="cert__body">
-              <h4 class="cert__title" id="cert-8">YOUR_CERTIFICATE_TITLE_8</h4>
-              <p class="cert__org">YOUR_ORGANIZATION</p>
-              <p class="cert__date">YOUR_DATE</p>
-              <ul class="cert__skills" role="list" aria-label="Skills covered"><li>YOUR_SKILL_1</li><li>YOUR_SKILL_2</li><li>YOUR_SKILL_3</li></ul>
-              <div class="cert__actions">
-                <a class="btn btn--primary btn--sm" href="assets/certificates/YOUR_CERTIFICATE_8.pdf" target="_blank" rel="noopener noreferrer" data-cert-view>View<span class="sr-only"> certificate: YOUR_CERTIFICATE_TITLE_8</span></a>
-                <a class="btn btn--ghost btn--sm" href="assets/certificates/YOUR_CERTIFICATE_8.pdf" download>
-                  <svg class="btn__icon btn__icon--dl" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg>Download<span class="sr-only"> certificate: YOUR_CERTIFICATE_TITLE_8 (PDF)</span>
-                </a>
-              </div>
-            </div>
-          </article>
-        </li>
-        <li class="cert-item" data-extra hidden data-reveal style="--i:2">
-          <article class="cert" aria-labelledby="cert-9" data-cert>
-            <div class="cert__media" style="--g1:#3730a3;--g2:#38bdf8">
-              <!-- Replace with: <img src="assets/images/YOUR_CERTIFICATE_IMAGE_9.jpg" alt="Certificate preview: YOUR_CERTIFICATE_TITLE_9" loading="lazy" width="640" height="400"> -->
-              <svg class="cert__art" viewBox="0 0 120 80" aria-hidden="true"><rect x="6" y="6" width="108" height="68" rx="5"/><path d="M22 24h50M22 34h36M22 44h28"/><circle cx="92" cy="50" r="9"/><path d="M87 58l-3 12 8-4 8 4-3-12"/></svg>
-            </div>
-            <div class="cert__body">
-              <h4 class="cert__title" id="cert-9">YOUR_CERTIFICATE_TITLE_9</h4>
-              <p class="cert__org">YOUR_ORGANIZATION</p>
-              <p class="cert__date">YOUR_DATE</p>
-              <ul class="cert__skills" role="list" aria-label="Skills covered"><li>YOUR_SKILL_1</li><li>YOUR_SKILL_2</li><li>YOUR_SKILL_3</li></ul>
-              <div class="cert__actions">
-                <a class="btn btn--primary btn--sm" href="assets/certificates/YOUR_CERTIFICATE_9.pdf" target="_blank" rel="noopener noreferrer" data-cert-view>View<span class="sr-only"> certificate: YOUR_CERTIFICATE_TITLE_9</span></a>
-                <a class="btn btn--ghost btn--sm" href="assets/certificates/YOUR_CERTIFICATE_9.pdf" download>
-                  <svg class="btn__icon btn__icon--dl" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg>Download<span class="sr-only"> certificate: YOUR_CERTIFICATE_TITLE_9 (PDF)</span>
+                <a class="btn btn--primary btn--sm" href="assets/certificates/quizoff-2026.jpg" target="_blank" rel="noopener noreferrer" data-cert-view>View<span class="sr-only"> certificate: QuizOff 2026</span></a>
+                <a class="btn btn--ghost btn--sm" href="assets/certificates/quizoff-2026.jpg" download>
+                  <svg class="btn__icon btn__icon--dl" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg>Download<span class="sr-only"> certificate</span>
                 </a>
               </div>
             </div>
@@ -1115,8 +1013,6 @@
         <li><a class="social" href="https://github.com/yashagarwal5798" target="_blank" rel="me noopener noreferrer"><svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg><span class="sr-only">GitHub (opens in a new tab)</span></a></li>
         <li><a class="social" href="https://www.linkedin.com/in/yash-agarwal5798/" target="_blank" rel="noopener noreferrer"><svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg><span class="sr-only">LinkedIn (opens in a new tab)</span></a></li>
         <li><a class="social" href="https://leetcode.com/u/yashagarwal5798" target="_blank" rel="me noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg><span class="sr-only">LeetCode (opens in a new tab)</span></a></li>
-        <li><a class="social" href="YOUR_X_URL" target="_blank" rel="noopener noreferrer"><svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="sr-only">X (opens in a new tab)</span></a></li>
-        <li><a class="social" href="YOUR_INSTAGRAM_URL" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg><span class="sr-only">Instagram (opens in a new tab)</span></a></li>
         <li><a class="social" href="mailto:yashagarwal0221@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7l8.5 6 8.5-6"/></svg><span class="sr-only">Email</span></a></li>
       </ul>
     </div>
@@ -1175,6 +1071,7 @@
         <ul role="list">
           <li><a href="#resume">Resume</a></li>
           <li><a href="mailto:yashagarwal0221@gmail.com">yashagarwal0221@gmail.com</a></li>
+          <li><a href="tel:+917906535798">+91 79065 35798</a></li>
           <li><a href="https://leetcode.com/u/yashagarwal5798" target="_blank" rel="me noopener noreferrer">LeetCode<span class="sr-only"> (opens in a new tab)</span></a></li>
         </ul>
       </div>
