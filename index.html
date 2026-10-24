@@ -404,253 +404,155 @@
     <header class="section-header" data-reveal>
       <p class="section-eyebrow">Tech stack &amp; skills</p>
       <h2 class="section-title" id="skills-title">Tools I <span class="gradient-text">work with</span></h2>
-      <p class="section-subtitle">The languages, frameworks and tools I use to design, build and ship — with an honest look at how comfortable I am in each.</p>
+      <p class="section-subtitle">Languages, core CS, tools and soft skills I use while learning and building.</p>
     </header>
 
-    <!-- Technology counter -->
-    <dl class="stats" data-reveal style="--i:1">
-      <div class="stat stat--main"><dt>Technologies</dt><dd><span data-stat="all">0</span></dd></div>
-      <div class="stat"><dt>Advanced</dt><dd><span data-stat="advanced">0</span></dd></div>
-      <div class="stat"><dt>Intermediate</dt><dd><span data-stat="intermediate">0</span></dd></div>
-      <div class="stat"><dt>Beginner</dt><dd><span data-stat="beginner">0</span></dd></div>
-    </dl>
+    <ul class="cat-grid" role="list">
 
-    <!-- Toolbar -->
-    <div class="toolbar" data-reveal style="--i:2">
-      <div class="toolbar__filters" role="group" aria-label="Filter technologies by category">
-        <button class="chip is-active" type="button" data-filter="all" aria-pressed="true">All</button>
-        <button class="chip" type="button" data-filter="programming" aria-pressed="false">Programming</button>
-        <button class="chip" type="button" data-filter="frontend" aria-pressed="false">Frontend</button>
-        <button class="chip" type="button" data-filter="backend" aria-pressed="false">Backend</button>
-        <button class="chip" type="button" data-filter="database" aria-pressed="false">Database</button>
-        <button class="chip" type="button" data-filter="ai" aria-pressed="false">AI &amp; Data Science</button>
-        <button class="chip" type="button" data-filter="tools" aria-pressed="false">Tools</button>
-      </div>
-      <div class="search">
-        <label class="sr-only" for="skill-search">Search technologies</label>
-        <svg class="search__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-        <input class="search__input" id="skill-search" type="search" placeholder="Search technologies…" autocomplete="off" data-skill-search>
-      </div>
-    </div>
-    <p class="skills__status" role="status" aria-live="polite" data-skill-status></p>
+      <li class="cat-item" data-reveal style="--i:1" data-category="languages">
+        <article class="cat" data-glow aria-labelledby="cat-languages">
+          <header class="cat__head">
+            <span class="cat__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 3l-6 9 6 9h8l6-9-6-9H8z"/></svg></span>
+            <h3 class="cat__title" id="cat-languages">Languages</h3>
+          </header>
+          <ul class="skill-list" role="list">
+            <li class="skill" data-level="intermediate" data-name="java">
+              <span class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/java/java-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-fallback="J"></span>
+              <span class="skill__name">Java</span>
+              <span class="skill__level"><span class="skill__bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Intermediate</span></span>
+            </li>
+            <li class="skill" data-level="intermediate" data-name="python">
+              <span class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/python/python-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-fallback="P"></span>
+              <span class="skill__name">Python</span>
+              <span class="skill__level"><span class="skill__bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Intermediate</span></span>
+            </li>
+            <li class="skill" data-level="beginner" data-name="c">
+              <span class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/c/c-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-fallback="C"></span>
+              <span class="skill__name">C</span>
+              <span class="skill__level"><span class="skill__bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Beginner</span></span>
+            </li>
+          </ul>
+        </article>
+      </li>
 
-    <ul class="cat-grid" role="list" data-skill-grid>
-      <li class="cat-item" data-reveal style="--i:2" data-category="programming">
-        <article class="cat" data-glow aria-labelledby="cat-programming">
+      <li class="cat-item" data-reveal style="--i:2" data-category="fullstack">
+        <article class="cat" data-glow aria-labelledby="cat-fullstack">
           <header class="cat__head">
-            <span class="cat__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></svg></span>
-            <h3 class="cat__title" id="cat-programming">Programming</h3>
-            <span class="cat__count" data-cat-count>4</span>
+            <span class="cat__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></span>
+            <h3 class="cat__title" id="cat-fullstack">Full-Stack</h3>
           </header>
           <ul class="skill-list" role="list">
-          <li class="skill" data-level="advanced" data-name="java">
-            <span class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/java/java-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-fallback="J"></span>
-            <span class="skill__name">Java</span>
-            <span class="skill__level"><span class="skill__bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Advanced</span></span>
-          </li>
-          <li class="skill" data-level="intermediate" data-name="python">
-            <span class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/python/python-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-fallback="P"></span>
-            <span class="skill__name">Python</span>
-            <span class="skill__level"><span class="skill__bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Intermediate</span></span>
-          </li>
-          <li class="skill" data-level="intermediate" data-name="c++">
-            <span class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/cplusplus/cplusplus-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-fallback="C"></span>
-            <span class="skill__name">C++</span>
-            <span class="skill__level"><span class="skill__bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Intermediate</span></span>
-          </li>
-          <li class="skill" data-level="intermediate" data-name="javascript">
-            <span class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/javascript/javascript-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-fallback="J"></span>
-            <span class="skill__name">JavaScript</span>
-            <span class="skill__level"><span class="skill__bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Intermediate</span></span>
-          </li>
+            <li class="skill" data-level="intermediate" data-name="html5">
+              <span class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/html5/html5-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-fallback="H"></span>
+              <span class="skill__name">HTML</span>
+              <span class="skill__level"><span class="skill__bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Intermediate</span></span>
+            </li>
+            <li class="skill" data-level="intermediate" data-name="css3">
+              <span class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/css3/css3-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-fallback="C"></span>
+              <span class="skill__name">CSS</span>
+              <span class="skill__level"><span class="skill__bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Intermediate</span></span>
+            </li>
+            <li class="skill" data-level="intermediate" data-name="javascript">
+              <span class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/javascript/javascript-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-fallback="JS"></span>
+              <span class="skill__name">JavaScript</span>
+              <span class="skill__level"><span class="skill__bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Intermediate</span></span>
+            </li>
+            <li class="skill" data-level="beginner" data-name="mongodb">
+              <span class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/mongodb/mongodb-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-fallback="M"></span>
+              <span class="skill__name">MongoDB</span>
+              <span class="skill__level"><span class="skill__bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Beginner</span></span>
+            </li>
+            <li class="skill" data-level="beginner" data-name="mysql">
+              <span class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/mysql/mysql-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-fallback="SQL"></span>
+              <span class="skill__name">MySQL</span>
+              <span class="skill__level"><span class="skill__bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Beginner</span></span>
+            </li>
           </ul>
         </article>
       </li>
-      <li class="cat-item" data-reveal style="--i:3" data-category="frontend">
-        <article class="cat" data-glow aria-labelledby="cat-frontend">
+
+      <li class="cat-item" data-reveal style="--i:3" data-category="corecs">
+        <article class="cat" data-glow aria-labelledby="cat-corecs">
           <header class="cat__head">
-            <span class="cat__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 9v11"/></svg></span>
-            <h3 class="cat__title" id="cat-frontend">Frontend</h3>
-            <span class="cat__count" data-cat-count>4</span>
+            <span class="cat__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+            <h3 class="cat__title" id="cat-corecs">Core CS</h3>
           </header>
           <ul class="skill-list" role="list">
-          <li class="skill" data-level="advanced" data-name="html5">
-            <span class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/html5/html5-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-fallback="H"></span>
-            <span class="skill__name">HTML5</span>
-            <span class="skill__level"><span class="skill__bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Advanced</span></span>
-          </li>
-          <li class="skill" data-level="advanced" data-name="css3">
-            <span class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/css3/css3-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-fallback="C"></span>
-            <span class="skill__name">CSS3</span>
-            <span class="skill__level"><span class="skill__bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Advanced</span></span>
-          </li>
-          <li class="skill" data-level="intermediate" data-name="react">
-            <span class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/react/react-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-fallback="R"></span>
-            <span class="skill__name">React</span>
-            <span class="skill__level"><span class="skill__bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Intermediate</span></span>
-          </li>
-          <li class="skill" data-level="intermediate" data-name="tailwind css">
-            <span class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/tailwindcss/tailwindcss-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-fallback="T"></span>
-            <span class="skill__name">Tailwind CSS</span>
-            <span class="skill__level"><span class="skill__bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Intermediate</span></span>
-          </li>
+            <li class="skill" data-level="intermediate" data-name="sql">
+              <span class="skill__name">SQL</span>
+              <span class="skill__level"><span class="skill__bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Intermediate</span></span>
+            </li>
+            <li class="skill" data-level="intermediate" data-name="dsa">
+              <span class="skill__name">DSA</span>
+              <span class="skill__level"><span class="skill__bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Active</span></span>
+            </li>
+            <li class="skill" data-level="beginner" data-name="os">
+              <span class="skill__name">OS</span>
+              <span class="skill__level"><span class="skill__bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Learning</span></span>
+            </li>
+            <li class="skill" data-level="beginner" data-name="cn">
+              <span class="skill__name">CN</span>
+              <span class="skill__level"><span class="skill__bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Learning</span></span>
+            </li>
           </ul>
         </article>
       </li>
-      <li class="cat-item" data-reveal style="--i:4" data-category="backend">
-        <article class="cat" data-glow aria-labelledby="cat-backend">
-          <header class="cat__head">
-            <span class="cat__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="6" rx="1.5"/><rect x="3" y="14" width="18" height="6" rx="1.5"/><path d="M7 7h.01M7 17h.01"/></svg></span>
-            <h3 class="cat__title" id="cat-backend">Backend</h3>
-            <span class="cat__count" data-cat-count>3</span>
-          </header>
-          <ul class="skill-list" role="list">
-          <li class="skill" data-level="intermediate" data-name="node.js">
-            <span class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/nodejs/nodejs-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-fallback="N"></span>
-            <span class="skill__name">Node.js</span>
-            <span class="skill__level"><span class="skill__bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Intermediate</span></span>
-          </li>
-          <li class="skill" data-level="intermediate" data-name="express">
-            <span class="icon icon--mono"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/express/express-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-fallback="E"></span>
-            <span class="skill__name">Express</span>
-            <span class="skill__level"><span class="skill__bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Intermediate</span></span>
-          </li>
-          <li class="skill" data-level="beginner" data-name="flask">
-            <span class="icon icon--mono"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/flask/flask-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-fallback="F"></span>
-            <span class="skill__name">Flask</span>
-            <span class="skill__level"><span class="skill__bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Beginner</span></span>
-          </li>
-          </ul>
-        </article>
-      </li>
-      <li class="cat-item" data-reveal style="--i:2" data-category="database">
-        <article class="cat" data-glow aria-labelledby="cat-database">
-          <header class="cat__head">
-            <span class="cat__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></span>
-            <h3 class="cat__title" id="cat-database">Database</h3>
-            <span class="cat__count" data-cat-count>3</span>
-          </header>
-          <ul class="skill-list" role="list">
-          <li class="skill" data-level="intermediate" data-name="mysql">
-            <span class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/mysql/mysql-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-fallback="M"></span>
-            <span class="skill__name">MySQL</span>
-            <span class="skill__level"><span class="skill__bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Intermediate</span></span>
-          </li>
-          <li class="skill" data-level="intermediate" data-name="mongodb">
-            <span class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/mongodb/mongodb-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-fallback="M"></span>
-            <span class="skill__name">MongoDB</span>
-            <span class="skill__level"><span class="skill__bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Intermediate</span></span>
-          </li>
-          <li class="skill" data-level="beginner" data-name="postgresql">
-            <span class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/postgresql/postgresql-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-fallback="P"></span>
-            <span class="skill__name">PostgreSQL</span>
-            <span class="skill__level"><span class="skill__bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Beginner</span></span>
-          </li>
-          </ul>
-        </article>
-      </li>
-      <li class="cat-item" data-reveal style="--i:3" data-category="ai">
-        <article class="cat" data-glow aria-labelledby="cat-ai">
-          <header class="cat__head">
-            <span class="cat__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg></span>
-            <h3 class="cat__title" id="cat-ai">AI &amp; Data Science</h3>
-            <span class="cat__count" data-cat-count>4</span>
-          </header>
-          <ul class="skill-list" role="list">
-          <li class="skill" data-level="intermediate" data-name="numpy">
-            <span class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/numpy/numpy-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-fallback="N"></span>
-            <span class="skill__name">NumPy</span>
-            <span class="skill__level"><span class="skill__bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Intermediate</span></span>
-          </li>
-          <li class="skill" data-level="intermediate" data-name="pandas">
-            <span class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/pandas/pandas-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-fallback="P"></span>
-            <span class="skill__name">Pandas</span>
-            <span class="skill__level"><span class="skill__bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Intermediate</span></span>
-          </li>
-          <li class="skill" data-level="intermediate" data-name="scikit-learn">
-            <span class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/scikitlearn/scikitlearn-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-fallback="s"></span>
-            <span class="skill__name">scikit-learn</span>
-            <span class="skill__level"><span class="skill__bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Intermediate</span></span>
-          </li>
-          <li class="skill" data-level="intermediate" data-name="jupyter">
-            <span class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/jupyter/jupyter-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-fallback="J"></span>
-            <span class="skill__name">Jupyter</span>
-            <span class="skill__level"><span class="skill__bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Intermediate</span></span>
-          </li>
-          </ul>
-        </article>
-      </li>
+
       <li class="cat-item" data-reveal style="--i:4" data-category="tools">
         <article class="cat" data-glow aria-labelledby="cat-tools">
           <header class="cat__head">
-            <span class="cat__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.4 2.4-2.6-.6-.6-2.6 2.6-2.2z"/></svg></span>
+            <span class="cat__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
             <h3 class="cat__title" id="cat-tools">Tools</h3>
-            <span class="cat__count" data-cat-count>4</span>
           </header>
           <ul class="skill-list" role="list">
-          <li class="skill" data-level="advanced" data-name="git">
-            <span class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/git/git-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-fallback="G"></span>
-            <span class="skill__name">Git</span>
-            <span class="skill__level"><span class="skill__bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Advanced</span></span>
-          </li>
-          <li class="skill" data-level="advanced" data-name="github">
-            <span class="icon icon--mono"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/github/github-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-fallback="G"></span>
-            <span class="skill__name">GitHub</span>
-            <span class="skill__level"><span class="skill__bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Advanced</span></span>
-          </li>
-          <li class="skill" data-level="advanced" data-name="vs code">
-            <span class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/vscode/vscode-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-fallback="V"></span>
-            <span class="skill__name">VS Code</span>
-            <span class="skill__level"><span class="skill__bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Advanced</span></span>
-          </li>
-          <li class="skill" data-level="intermediate" data-name="postman">
-            <span class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/postman/postman-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-fallback="P"></span>
-            <span class="skill__name">Postman</span>
-            <span class="skill__level"><span class="skill__bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Intermediate</span></span>
-          </li>
+            <li class="skill" data-level="intermediate" data-name="git">
+              <span class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/git/git-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-fallback="G"></span>
+              <span class="skill__name">Git</span>
+              <span class="skill__level"><span class="skill__bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Intermediate</span></span>
+            </li>
+            <li class="skill" data-level="intermediate" data-name="github">
+              <span class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/github/github-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-fallback="GH"></span>
+              <span class="skill__name">GitHub</span>
+              <span class="skill__level"><span class="skill__bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Intermediate</span></span>
+            </li>
+            <li class="skill" data-level="intermediate" data-name="vscode">
+              <span class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/vscode/vscode-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-fallback="VS"></span>
+              <span class="skill__name">VS Code</span>
+              <span class="skill__level"><span class="skill__bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Intermediate</span></span>
+            </li>
+            <li class="skill" data-level="beginner" data-name="docker">
+              <span class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/docker/docker-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-fallback="D"></span>
+              <span class="skill__name">Docker</span>
+              <span class="skill__level"><span class="skill__bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Beginner</span></span>
+            </li>
           </ul>
         </article>
       </li>
+
+      <li class="cat-item" data-reveal style="--i:5" data-category="soft">
+        <article class="cat" data-glow aria-labelledby="cat-soft">
+          <header class="cat__head">
+            <span class="cat__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+            <h3 class="cat__title" id="cat-soft">Soft skills</h3>
+          </header>
+          <ul class="skill-list" role="list">
+            <li class="skill" data-level="advanced" data-name="problem-solving">
+              <span class="skill__name">Problem solving</span>
+              <span class="skill__level"><span class="skill__bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Strong</span></span>
+            </li>
+            <li class="skill" data-level="intermediate" data-name="time-management">
+              <span class="skill__name">Time management</span>
+              <span class="skill__level"><span class="skill__bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Intermediate</span></span>
+            </li>
+            <li class="skill" data-level="intermediate" data-name="leadership">
+              <span class="skill__name">Leadership</span>
+              <span class="skill__level"><span class="skill__bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Growing</span></span>
+            </li>
+          </ul>
+        </article>
+      </li>
+
     </ul>
-    <p class="skills__empty" hidden data-skill-empty>No technologies match your search. Try another keyword or category.</p>
-
-    <!-- Currently learning -->
-    <div class="learning" aria-labelledby="learning-title">
-      <h3 class="learning__title" id="learning-title" data-reveal><span class="pulse" aria-hidden="true"></span>Currently learning</h3>
-      <ul class="learning__grid" role="list">
-        <li class="learn" data-reveal style="--i:1">
-          <span class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/spring/spring-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-fallback="S"></span>
-          <div class="learn__body">
-            <p class="learn__name">Spring Boot <span class="learn__note">REST APIs &amp; JPA</span></p>
-            <div class="progress" role="progressbar" aria-label="Spring Boot learning progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="35">
-              <span class="progress__bar" style="--p:35%"></span>
-            </div>
-          </div>
-          <span class="learn__pct">35%</span>
-        </li>
-        <li class="learn" data-reveal style="--i:2">
-          <span class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/tensorflow/tensorflow-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-fallback="T"></span>
-          <div class="learn__body">
-            <p class="learn__name">TensorFlow <span class="learn__note">Neural networks</span></p>
-            <div class="progress" role="progressbar" aria-label="TensorFlow learning progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="25">
-              <span class="progress__bar" style="--p:25%"></span>
-            </div>
-          </div>
-          <span class="learn__pct">25%</span>
-        </li>
-        <li class="learn" data-reveal style="--i:3">
-          <span class="icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/docker/docker-original.svg" alt="" width="28" height="28" loading="lazy" decoding="async" data-fallback="D"></span>
-          <div class="learn__body">
-            <p class="learn__name">Docker <span class="learn__note">Containers &amp; Compose</span></p>
-            <div class="progress" role="progressbar" aria-label="Docker learning progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="45">
-              <span class="progress__bar" style="--p:45%"></span>
-            </div>
-          </div>
-          <span class="learn__pct">45%</span>
-        </li>
-      </ul>
-    </div>
-
   </div>
 </section>
 
