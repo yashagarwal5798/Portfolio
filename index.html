@@ -102,6 +102,79 @@
       border-radius: inherit;
     }
   </style>
+
+  <style id="ach-split-style">
+    .ach-split {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.25rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 768px) {
+      .ach-split { grid-template-columns: 1fr; }
+    }
+    .ach-panel {
+      background: var(--surface-subtle, rgba(240,235,227,0.04));
+      border: 1px solid var(--border, rgba(240,235,227,0.1));
+      border-radius: var(--radius-card, 20px);
+      padding: 1.5rem 1.35rem;
+    }
+    .ach-panel__title {
+      margin: 0 0 1rem;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text, #f0ebe3);
+    }
+    .ach-panel__list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+    .ach-panel__item {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 0.75rem;
+      padding: 0.7rem 0.85rem;
+      border-radius: var(--radius-md, 12px);
+      background: var(--surface-strong, rgba(240,235,227,0.07));
+      color: var(--text, #f0ebe3);
+      text-decoration: none;
+      border: 1px solid transparent;
+      transition: border-color 0.2s ease, background 0.2s ease;
+    }
+    a.ach-panel__item:hover {
+      border-color: var(--blue-500, #4a7c59);
+      background: var(--glass, rgba(240,235,227,0.05));
+    }
+    .ach-panel__item--static {
+      cursor: default;
+    }
+    .ach-panel__main {
+      font-size: 0.95rem;
+      line-height: 1.45;
+      color: var(--text-muted, #9a958c);
+    }
+    .ach-panel__main strong {
+      color: var(--text, #f0ebe3);
+      font-weight: 600;
+    }
+    .ach-panel__go {
+      flex-shrink: 0;
+      color: var(--blue-400, #6b9b7a);
+      font-size: 0.95rem;
+      margin-top: 0.1rem;
+    }
+    .ach-panel__note {
+      margin: 1rem 0 0;
+      font-size: 0.8rem;
+      color: var(--text-muted, #9a958c);
+    }
+  </style>
+
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -672,162 +745,79 @@
     <header class="section-header" data-reveal>
       <p class="section-eyebrow">Achievements &amp; certifications</p>
       <h2 class="section-title" id="ach-title">Milestones <span class="gradient-text">along the way</span></h2>
-      <p class="section-subtitle">Streaks, shipped work and certifications that mark steady progress — the numbers behind the projects.</p>
+      <p class="section-subtitle">Internship, LeetCode consistency, workshops and certifications — proof of steady progress.</p>
     </header>
 
-    <!-- Achievement cards -->
-    <!-- SAMPLE VALUES: replace these numbers with your own (data-count), or delete cards you do not need -->
-    <ul class="ach-grid" role="list">
-      <li class="ach" data-reveal style="--i:0">
-        <span class="ach__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3c1 3-2 4.5-2 8a3 3 0 0 0 6 0c0-1-.5-2-1-2.5C17.5 9.5 19 11.5 19 14a7 7 0 0 1-14 0c0-4.5 4-6 7-11z"/></svg></span>
-        <p class="ach__value"><span data-count="45" data-suffix="">45</span> <span class="ach__unit">days</span></p>
-        <h3 class="ach__label">LeetCode Streak</h3>
-        <p class="ach__meta">Longest run of daily solves</p>
-      </li>
-      <li class="ach" data-reveal style="--i:1">
-        <span class="ach__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></svg></span>
-        <p class="ach__value"><span data-count="350" data-suffix="+">350+</span></p>
-        <h3 class="ach__label">Problems Solved</h3>
-        <p class="ach__meta">All-time, across every difficulty</p>
-      </li>
-      <li class="ach" data-reveal style="--i:2">
-        <span class="ach__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.5"/><path d="M3 12h5.5M15.5 12H21"/></svg></span>
-        <p class="ach__value"><span data-count="1200" data-suffix="+">1,200+</span></p>
-        <h3 class="ach__label">GitHub Contributions</h3>
-        <p class="ach__meta">All-time total since joining GitHub</p>
-      </li>
-      <li class="ach" data-reveal style="--i:0">
-        <span class="ach__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 5h18v11H3zM8 21l4-5 4 5M12 16v-0"/></svg></span>
-        <p class="ach__value"><span data-count="8" data-suffix="">8</span> <span class="ach__unit">attended</span></p>
-        <h3 class="ach__label">Workshops</h3>
-        <p class="ach__meta">Hands-on technical sessions</p>
-      </li>
-      <li class="ach" data-reveal style="--i:1">
-        <span class="ach__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg></span>
-        <p class="ach__value"><span data-count="5" data-suffix="">5</span> <span class="ach__unit">joined</span></p>
-        <h3 class="ach__label">Hackathons</h3>
-        <p class="ach__meta">Events you took part in</p>
-      </li>
-      <li class="ach" data-reveal style="--i:2">
-        <span class="ach__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.2"/><circle cx="6" cy="18" r="2.2"/><circle cx="18" cy="8" r="2.2"/><path d="M6 8.2v7.6M18 10.2c0 4-6 3-11 6.2"/></svg></span>
-        <p class="ach__value"><span data-count="12" data-suffix="">12</span> <span class="ach__unit">PRs merged</span></p>
-        <h3 class="ach__label">Open Source</h3>
-        <p class="ach__meta">Merged pull requests</p>
-      </li>
-    </ul>
-
-    <!-- Featured achievement -->
-    <article class="feature" data-reveal style="--i:1" aria-labelledby="feature-title">
-      <div class="feature__art" aria-hidden="true">
-        <svg viewBox="0 0 24 24"><path d="M8 4h8v5a4 4 0 0 1-8 0V4z"/><path d="M8 6H5a2 2 0 0 0 0 4h3M16 6h3a2 2 0 0 1 0 4h-3M12 13v4M8.5 21h7M10 17h4v4h-4z"/></svg>
-      </div>
-      <div class="feature__body">
-        <p class="feature__badge">Featured achievement</p>
-        <h3 class="feature__title" id="feature-title">LeetCode Consistency</h3>
-        <p class="feature__text">Earned 50-day and 100-day badges on LeetCode while building a strong DSA foundation. — two or three sentences on what you achieved, your role and the outcome.</p>
-        <ul class="feature__facts" role="list">
-          <li><span>Date</span>2026</li>
-          <li><span>Role</span>Java Development Intern</li>
-          <li><span>Scale</span>100</li>
+    <div class="ach-split" data-reveal style="--i:1">
+      <!-- Achievements (numbers + impact) -->
+      <article class="ach-panel" aria-labelledby="ach-panel-title">
+        <h3 class="ach-panel__title" id="ach-panel-title">Achievements</h3>
+        <ul class="ach-panel__list" role="list">
+          <li>
+            <a class="ach-panel__item" href="https://leetcode.com/u/yashagarwal5798/" target="_blank" rel="noopener noreferrer">
+              <span class="ach-panel__main"><strong>50-day</strong> &amp; <strong>100-day</strong> badges on LeetCode</span>
+              <span class="ach-panel__go" aria-hidden="true">↗</span>
+              <span class="sr-only"> (opens in a new tab)</span>
+            </a>
+          </li>
+          <li>
+            <a class="ach-panel__item" href="https://leetcode.com/u/yashagarwal5798/" target="_blank" rel="noopener noreferrer">
+              <span class="ach-panel__main">Active problem solving &amp; contest practice on <strong>LeetCode</strong></span>
+              <span class="ach-panel__go" aria-hidden="true">↗</span>
+              <span class="sr-only"> (opens in a new tab)</span>
+            </a>
+          </li>
+          <li>
+            <a class="ach-panel__item" href="https://github.com/yashagarwal5798" target="_blank" rel="me noopener noreferrer">
+              <span class="ach-panel__main">Building in public on <strong>GitHub</strong></span>
+              <span class="ach-panel__go" aria-hidden="true">↗</span>
+              <span class="sr-only"> (opens in a new tab)</span>
+            </a>
+          </li>
+          <li>
+            <div class="ach-panel__item ach-panel__item--static">
+              <span class="ach-panel__main"><strong>Java Development Internship</strong> — Pinnacle Labs (Jun–Jul 2026)</span>
+            </div>
+          </li>
+          <li>
+            <div class="ach-panel__item ach-panel__item--static">
+              <span class="ach-panel__main"><strong>UnoQ Build Lab</strong> — hackFront India × Arduino @ GLA University</span>
+            </div>
+          </li>
         </ul>
-        <a class="btn btn--primary btn--sm" href="#projects">See the project
-          <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      </div>
-    </article>
+      </article>
 
-    <!-- Certificate gallery -->
-    <div class="certs" aria-labelledby="certs-title">
-      <div class="certs__head" data-reveal>
-        <h3 class="certs__title" id="certs-title">Certificates</h3>
-        <p class="certs__count" data-cert-count>3 certificates</p>
-      </div>
-      <ul class="certs__grid" role="list" id="cert-grid" data-cert-grid>
-        <li class="cert-item" data-reveal style="--i:0">
-          <article class="cert" aria-labelledby="cert-1" data-cert>
-            <div class="cert__media" style="--g1:#2d5a3a;--g2:#c4785a">
-              <img src="assets/certificates/pinnacle-preview.jpg" alt="Certificate: Pinnacle Labs Java Internship" loading="lazy" width="640" height="400" onerror="this.style.display='none'">
-            </div>
-            <div class="cert__body">
-              <h4 class="cert__title" id="cert-1">Java Development Internship</h4>
-              <p class="cert__org">Pinnacle Labs</p>
-              <p class="cert__date">15 Jun – 15 Jul 2026</p>
-              <ul class="cert__skills" role="list" aria-label="Skills covered"><li>Java</li><li>Software Development</li><li>Problem Solving</li></ul>
-              <div class="cert__actions">
-                <a class="btn btn--primary btn--sm" href="assets/certificates/pinnacle-java-internship.pdf" target="_blank" rel="noopener noreferrer" data-cert-view>View<span class="sr-only"> certificate: Pinnacle Labs</span></a>
-                <a class="btn btn--ghost btn--sm" href="assets/certificates/pinnacle-java-internship.pdf" download>
-                  <svg class="btn__icon btn__icon--dl" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg>Download<span class="sr-only"> certificate PDF</span>
-                </a>
-              </div>
-            </div>
-          </article>
-        </li>
-        <li class="cert-item" data-reveal style="--i:1">
-          <article class="cert" aria-labelledby="cert-2" data-cert>
-            <div class="cert__media" style="--g1:#4a7c59;--g2:#6b9b7a">
-              <img src="assets/certificates/unoq-build-lab.jpg" alt="Certificate: UnoQ Build Lab" loading="lazy" width="640" height="400">
-            </div>
-            <div class="cert__body">
-              <h4 class="cert__title" id="cert-2">UnoQ Build Lab</h4>
-              <p class="cert__org">hackFront India × Arduino</p>
-              <p class="cert__date">08 Oct 2026 · GLA University</p>
-              <ul class="cert__skills" role="list" aria-label="Skills covered"><li>Hardware</li><li>Hands-on Building</li><li>Problem Solving</li></ul>
-              <div class="cert__actions">
-                <a class="btn btn--primary btn--sm" href="assets/certificates/unoq-build-lab.jpg" target="_blank" rel="noopener noreferrer" data-cert-view>View<span class="sr-only"> certificate: UnoQ Build Lab</span></a>
-                <a class="btn btn--ghost btn--sm" href="assets/certificates/unoq-build-lab.jpg" download>
-                  <svg class="btn__icon btn__icon--dl" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg>Download<span class="sr-only"> certificate</span>
-                </a>
-              </div>
-            </div>
-          </article>
-        </li>
-        <li class="cert-item" data-reveal style="--i:2">
-          <article class="cert" aria-labelledby="cert-3" data-cert>
-            <div class="cert__media" style="--g1:#3d6b4a;--g2:#a8c4b0">
-              <img src="assets/certificates/quizoff-2026.jpg" alt="Certificate: QuizOff 2026 AI Quiz" loading="lazy" width="640" height="400">
-            </div>
-            <div class="cert__body">
-              <h4 class="cert__title" id="cert-3">QuizOff 2026 — India's Biggest AI Quiz</h4>
-              <p class="cert__org">CampusCrew × Unstop</p>
-              <p class="cert__date">19 Jul 2026</p>
-              <ul class="cert__skills" role="list" aria-label="Skills covered"><li>AI</li><li>Quiz</li><li>Analytical Thinking</li></ul>
-              <div class="cert__actions">
-                <a class="btn btn--primary btn--sm" href="assets/certificates/quizoff-2026.jpg" target="_blank" rel="noopener noreferrer" data-cert-view>View<span class="sr-only"> certificate: QuizOff 2026</span></a>
-                <a class="btn btn--ghost btn--sm" href="assets/certificates/quizoff-2026.jpg" download>
-                  <svg class="btn__icon btn__icon--dl" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg>Download<span class="sr-only"> certificate</span>
-                </a>
-              </div>
-            </div>
-          </article>
-        </li>
-      </ul>
-      <div class="certs__more" data-reveal>
-        <button class="btn btn--ghost" type="button" aria-expanded="false" aria-controls="cert-grid" data-cert-toggle data-total="9">
-          <span data-cert-toggle-label>View All Certificates (9)</span>
-          <svg class="btn__icon btn__icon--down" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-        </button>
-      </div>
+      <!-- Certifications -->
+      <article class="ach-panel" aria-labelledby="cert-panel-title">
+        <h3 class="ach-panel__title" id="cert-panel-title">Certifications</h3>
+        <ul class="ach-panel__list" role="list">
+          <li>
+            <a class="ach-panel__item" href="assets/certificates/pinnacle-java-internship.pdf" target="_blank" rel="noopener noreferrer">
+              <span class="ach-panel__main"><strong>Pinnacle Labs</strong> — Java Development Internship</span>
+              <span class="ach-panel__go" aria-hidden="true">↗</span>
+              <span class="sr-only"> View certificate (opens in a new tab)</span>
+            </a>
+          </li>
+          <li>
+            <a class="ach-panel__item" href="assets/certificates/unoq-build-lab.jpg" target="_blank" rel="noopener noreferrer">
+              <span class="ach-panel__main"><strong>UnoQ Build Lab</strong> — hackFront India × Arduino</span>
+              <span class="ach-panel__go" aria-hidden="true">↗</span>
+              <span class="sr-only"> View certificate (opens in a new tab)</span>
+            </a>
+          </li>
+          <li>
+            <a class="ach-panel__item" href="assets/certificates/quizoff-2026.jpg" target="_blank" rel="noopener noreferrer">
+              <span class="ach-panel__main"><strong>QuizOff 2026</strong> — CampusCrew × Unstop (AI Quiz)</span>
+              <span class="ach-panel__go" aria-hidden="true">↗</span>
+              <span class="sr-only"> View certificate (opens in a new tab)</span>
+            </a>
+          </li>
+        </ul>
+        <p class="ach-panel__note">Open any item to view the certificate or profile.</p>
+      </article>
     </div>
 
   </div>
-
-  <!-- Certificate preview dialog (progressive enhancement; View links still work without JS) -->
-  <dialog class="cert-dialog" aria-labelledby="cert-dialog-title" data-cert-dialog>
-    <div class="cert-dialog__panel">
-      <button class="cert-dialog__close" type="button" aria-label="Close preview" data-cert-close>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
-      </button>
-      <div class="cert-dialog__media" data-cert-preview></div>
-      <div class="cert-dialog__info">
-        <h3 id="cert-dialog-title" data-cert-d-title>Certificate</h3>
-        <p data-cert-d-meta></p>
-        <ul class="cert__skills" role="list" data-cert-d-skills></ul>
-        <div class="cert__actions">
-          <a class="btn btn--primary btn--sm" target="_blank" rel="noopener noreferrer" data-cert-d-open>Open original<span class="sr-only"> (opens in a new tab)</span></a>
-          <a class="btn btn--ghost btn--sm" download data-cert-d-download>Download</a>
-        </div>
-      </div>
-    </div>
-  </dialog>
 </section>
 
 <section class="section section--end contact" id="contact" aria-labelledby="contact-title" data-contact>
