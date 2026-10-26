@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yashagarwal-portfolio-eight.vercel.app/sitemap.xml
+Sitemap: https://yashagarwal5798.vercel.app/sitemap.xml
